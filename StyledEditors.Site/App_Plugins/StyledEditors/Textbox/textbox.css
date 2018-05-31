@@ -1,0 +1,29 @@
+.styled-textbox {
+    padding: 0;
+}
+
+.styled-textbox .styled-textbox-input {
+    border: 0;
+    border-bottom: 1px solid #eee;
+    height: 1.5em;
+    width: 98%;
+}
+
+.styled-textbox .styled-textbox-warning {
+    text-align: right;
+    width: 98%;
+}
+
+.styled-textbox .styled-textbox-label {
+    font-weight: 700;
+    color: #ddd;
+}
+
+.styled-textbox .styled-textbox-full {
+    width: 98%;
+}
+
+.styled-textbox .text-danger {
+    color: #F66561;
+}
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<language alias="en" intName="English (US)" localName="English (US)" lcid="" culture="en-US">
+  <creator>
+    <name>StyledEditor Team</name>
+  </creator>
+  <area alias="styledtext">
+    <key alias="limit">You have reached the limit of %limit% characters</key>
+    <key alias="advice">Over by %over% characters</key>
+    <key alias="remaining">%remain% characters left</key>
+  </area>
+</language>

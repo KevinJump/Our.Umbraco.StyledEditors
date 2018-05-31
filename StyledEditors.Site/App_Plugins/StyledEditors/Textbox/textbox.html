@@ -1,0 +1,22 @@
+<div ng-controller="styledTextboxController as vm"
+     class="styled-editor styled-textbox">
+
+    <div class="styled-textbox-label"
+         ng-if="model.hideLabel">{{model.label}}</div>
+
+    <input type="text"
+           name="styledTextbox"
+           class="umb-editor umb-textstring styled-textbox-input {{vm.config.cssclass}}"
+           id="{{model.alias}}"
+           style="{{vm.config.style}}"
+           placeholder="{{vm.config.placeholder}}"
+           ng-class="{'styled-text-full' : model.hideLabel}"
+           ng-model="model.value"
+           ng-keyup="vm.checkCharCount()"
+           ng-required="model.validation.mandatory"
+           maxlength="500" />
+
+    <div class="styled-textbox-warning umb-editor">
+        <span ng-bind="vm.message" class="{{vm.messageClass}}" ng-show="vm.limit > 0"></span>
+    </div>
+</div>
