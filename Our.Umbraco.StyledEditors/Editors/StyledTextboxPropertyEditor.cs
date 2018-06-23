@@ -9,10 +9,10 @@ using Umbraco.Web.PropertyEditors;
 
 namespace Our.Umbraco.StyledEditors.Editors
 {
-    [PropertyEditorAsset(ClientDependencyType.Css, "~/App_Plugins/StyledEditors/Textbox/textbox.css")]
-    [PropertyEditorAsset(ClientDependencyType.Javascript, "~/App_Plugins/StyledEditors/Textbox/textboxController.js")]
+    [PropertyEditorAsset(ClientDependencyType.Css, StyledEditors.PluginFolder + "Textbox/textbox.css")]
+    [PropertyEditorAsset(ClientDependencyType.Javascript, StyledEditors.PluginFolder + "Textbox/textboxController.js")]
     // [PropertyEditorAsset(ClientDependencyType.Javascript, "~/App_Plugins/StyledEditors/Textbox/textboxPreviewController.js")]
-    [PropertyEditor("Styled.Textbox", "Styled Textbox", "~/App_Plugins/StyledEditors/Textbox/textbox.html",
+    [PropertyEditor("Styled.Textbox", "Styled Textbox", StyledEditors.PluginFolder + "/Textbox/textbox.html",
         Icon = "icon-brush", 
         ValueType = "text",
         Group = "common", 

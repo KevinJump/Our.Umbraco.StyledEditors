@@ -8,7 +8,7 @@ namespace Our.Umbraco.StyledEditors
 {
     public class StyledEditors
     {
-        public const string AppPluginsFolder = "~/App_Plugins/StyledEditors/";
+        public const string PluginFolder = "~/App_Plugins/StyledEditors/";
     }
 
     
