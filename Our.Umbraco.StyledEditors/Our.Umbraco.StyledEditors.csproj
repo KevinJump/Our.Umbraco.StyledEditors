@@ -208,6 +208,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters\StyledTextboxPropertyConverter.cs" />
     <Compile Include="Editors\StyledTextboxPreValueEditor.cs" />
     <Compile Include="Editors\StyledTextboxPropertyEditor.cs" />
     <Compile Include="StyledEditors.cs" />
@@ -217,9 +218,7 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Converters\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="App_Plugins\StyledEditors\Lang\en.xml" />
     <Content Include="App_Plugins\StyledEditors\Lang\en-us.xml" />
