@@ -8,9 +8,6 @@
 Drop in and replace the standard text and number editors with a 
 bit of style. 
 		
-Includes: 
-	Styled Textbox, 
-	Styled TextArea, 
-	Styled Numeric, 
-	Styled Decimal
+Includes Editors for: 
+	Styled Textbox, Styled TextArea, Styled Numeric, Styled Decimal
 
