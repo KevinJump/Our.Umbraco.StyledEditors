@@ -1,46 +1,27 @@
 ﻿using ClientDependency.Core;
-using System;
+using Our.Umbraco.StyledEditors.Configuration;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Umbraco.Core.Logging;
 using Umbraco.Core.PropertyEditors;
 using Umbraco.Web.PropertyEditors;
 
 namespace Our.Umbraco.StyledEditors.Editors
 {
-    [PropertyEditorAsset(ClientDependencyType.Css, StyledEditors.PluginFolder + "Textbox/textbox.css")]
-    [PropertyEditorAsset(ClientDependencyType.Javascript, StyledEditors.PluginFolder + "Textbox/textboxController.js")]
-    // [PropertyEditorAsset(ClientDependencyType.Javascript, "~/App_Plugins/StyledEditors/Textbox/textboxPreviewController.js")]
-    [PropertyEditor("Styled.Textbox", "Styled Textbox", StyledEditors.PluginFolder + "/Textbox/textbox.html",
-        Icon = "icon-brush", 
-        ValueType = "text",
-        Group = "common", 
-        IsParameterEditor = true)]
-    public class StyledTextboxPropertyEditor : PropertyEditor
+    [PropertyEditorAsset(ClientDependencyType.Css, StyledEditors.PluginFolder + "/stylededitors.css")]
+    [PropertyEditorAsset(ClientDependencyType.Javascript, StyledEditors.PluginFolder + "/StyledTextboxController.js")]
+
+    [DataEditor(StyledEditors.Aliases.TextBox, EditorType.PropertyValue | EditorType.MacroParameter, "Styled Textbox", 
+        StyledEditors.Views.TextBox, Icon = "icon-brush color-indigo", Group = "Common")]
+    public class StyledTextboxPropertyEditor : DataEditor
     {
-        private IDictionary<string, object> defaultPreValues;
+        public StyledTextboxPropertyEditor(ILogger logger)
+             : base(logger)
+        { }
 
-        public override IDictionary<string, object> DefaultPreValues {
-            get { return this.defaultPreValues; }
-            set { this.defaultPreValues = value; }
-        }
+        protected override IDataValueEditor CreateValueEditor()
+            => new StyledTextValueEditor(Attribute);
 
-        public StyledTextboxPropertyEditor()
-        {
-            this.defaultPreValues = new Dictionary<string, object>
-            {
-                { "style", "font-size: 36px;\r\nline-height: 1.25;\r\nfont-weight: bold;" },
-                { "cssclass", "" },
-                { "charCount", 0 },
-                { "enforceLimit", false },
-                { "hideLabel", 0 }
-            };
-        }
-
-        protected override PreValueEditor CreatePreValueEditor()
-        {
-            return new StyledTextboxPreValueEditor();
-        }
+        protected override IConfigurationEditor CreateConfigurationEditor()
+            => new StyledTextBoxConfigurationEditor();
     }
 }

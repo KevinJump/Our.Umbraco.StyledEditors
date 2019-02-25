@@ -1,0 +1,29 @@
+<div ng-controller="StyledEditors.textareaController as vm" 
+     class="styled-editor"
+     ng-class="{'styled-editors-wide':vm.config.hideLabel}">
+
+    <ng-form name="textareaFieldForm">
+        <textarea ng-model="model.value" id="{{model.alias}}"
+                  name="textarea"
+                  rows="{{vm.config.rows || 10}}"
+                  class="umb-property-editor umb-textarea textstring styled-editor-textarea {{vm.config.style}}"
+                  style="{{vm.config.style}}"
+                  val-server="value"
+                  ng-keyup="vm.change()"></textarea>
+
+        <span ng-messages="textareaFieldForm.textarea.$error" show-validation-on-submit>
+            <span class="help-inline" ng-message="required"><localize key="general_required">Required</localize></span>
+            <span class="help-inline" ng-message="valServer">{{textareaFieldForm.textarea.errorMsg}}</span>
+        </span>
+
+        <div class="help {{vm.countStyle}}" ng-if="vm.maxlength">
+            <strong ng-if="model.count != 0">{{vm.getCount(model.count)}}</strong>
+            <localize ng-if="model.count > 0" key="textbox_characters_left">characters left</localize>
+            <span ng-if="model.count == 0">
+                <localize key="stylededitors_limit">limit</localize>
+                {{model.config.maxChars}}
+            </span>
+            <localize ng-if="model.count < 0" key="stylededitors_over">characters over</localize>
+        </div>
+    </ng-form>
+</div>

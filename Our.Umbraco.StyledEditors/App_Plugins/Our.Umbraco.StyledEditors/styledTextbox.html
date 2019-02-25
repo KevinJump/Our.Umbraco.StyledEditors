@@ -1,0 +1,32 @@
+﻿<div ng-controller="StyledEditors.textboxController as vm" 
+     class="styled-editor"
+     ng-class="{'styled-editors-wide':vm.config.hideLabel}">
+
+    <ng-form name="styledTextboxFieldForm">
+        <input type="text" name="textbox"
+               id="{{model.alias}}" ng-model="model.value"
+               class="umb-property-editor umb-textstring textstring styled-editor-textbox {{vm.config.cssclass}}"
+               style="{{vm.config.style}}"
+               placeholder="{{vm.config.placeholder}}"
+               ng-class="{'styled-text-full' : vm.config.hidelLabel}"
+               val-server="value"
+               ng-required="model.validation.mandatory"
+               ng-trim="false"
+               ng-keyup="vm.change()" />
+
+        <span ng-messages="textboxFieldForm.textbox.$error" show-validation-on-submit>
+            <span class="help-inline" ng-message="valServer">{{textboxFieldForm.textbox.errorMsg}}</span>
+            <span class="help-inline" ng-message="required"><localize key="general_required">Required</localize></span>
+        </span>
+
+        <div class="help {{vm.countStyle}}" ng-if="vm.maxlength">
+            <strong ng-if="model.count != 0">{{vm.getCount(model.count)}}</strong>
+            <localize ng-if="model.count > 0" key="textbox_characters_left">characters left</localize>
+            <span ng-if="model.count == 0">
+                <localize key="stylededitors_limit">limit</localize>
+                {{model.config.maxChars}}
+            </span>
+            <localize ng-if="model.count < 0" key="stylededitors_over">characters over</localize>
+        </div>
+    </ng-form>
+</div>

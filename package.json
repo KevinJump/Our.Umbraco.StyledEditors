@@ -1,7 +1,7 @@
 {
   "name": "our.umbraco.stylededitors",
   "version": "1.0.0",
-  "description": "Styled Editors for Umbraco",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-watch": "^5.0.0"
+    "gulp": "^4.0.0"
   }
 }

@@ -1,18 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27703.2018
+VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.StyledEditors", "Our.Umbraco.StyledEditors\Our.Umbraco.StyledEditors.csproj", "{CE02F182-DEC6-4BA7-AECF-2E5415914086}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.StyledEditors", "Our.Umbraco.StyledEditors\Our.Umbraco.StyledEditors.csproj", "{F3D51C7C-BE38-4362-AE7F-C71D2A11C1FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyledEditors.Site", "StyledEditors.Site\StyledEditors.Site.csproj", "{2F2E8BB7-7C38-4D36-8980-EACEC1A3DD0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyledEditors.Site", "StyledEditors.Site\StyledEditors.Site.csproj", "{35A5C1C5-1829-4363-8810-F981184BADFB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D16797D5-C56D-480E-8629-2C6CDA151C40}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{0219805D-BDAD-4799-948F-AA5B0543CEE4}"
 	ProjectSection(SolutionItems) = preProject
-		.gitattributes = .gitattributes
-		.gitignore = .gitignore
+		gulp.config.json = gulp.config.json
 		gulpfile.js = gulpfile.js
-		readme.md = readme.md
+		readme.txt = readme.txt
 	EndProjectSection
 EndProject
 Global
@@ -21,19 +20,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CE02F182-DEC6-4BA7-AECF-2E5415914086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CE02F182-DEC6-4BA7-AECF-2E5415914086}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CE02F182-DEC6-4BA7-AECF-2E5415914086}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CE02F182-DEC6-4BA7-AECF-2E5415914086}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2F2E8BB7-7C38-4D36-8980-EACEC1A3DD0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2F2E8BB7-7C38-4D36-8980-EACEC1A3DD0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2F2E8BB7-7C38-4D36-8980-EACEC1A3DD0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2F2E8BB7-7C38-4D36-8980-EACEC1A3DD0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3D51C7C-BE38-4362-AE7F-C71D2A11C1FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3D51C7C-BE38-4362-AE7F-C71D2A11C1FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3D51C7C-BE38-4362-AE7F-C71D2A11C1FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3D51C7C-BE38-4362-AE7F-C71D2A11C1FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35A5C1C5-1829-4363-8810-F981184BADFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35A5C1C5-1829-4363-8810-F981184BADFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35A5C1C5-1829-4363-8810-F981184BADFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35A5C1C5-1829-4363-8810-F981184BADFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {421B19AA-8874-4768-9C15-E0F362E4970B}
+		SolutionGuid = {3FD4CC01-DE06-4BE5-907C-655E361A30B8}
 	EndGlobalSection
 EndGlobal

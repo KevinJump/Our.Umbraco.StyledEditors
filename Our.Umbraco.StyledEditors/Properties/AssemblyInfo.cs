@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Our.Umbraco.StyledEditors")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Styled Editors for Umbraco 8")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Our.Umbraco.StyledEditors")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCopyright("MIT")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ce02f182-dec6-4ba7-aecf-2e5415914086")]
+[assembly: Guid("f3d51c7c-be38-4362-ae7f-c71d2a11c1fc")]
 
 // Version information for an assembly consists of the following four values:
 //

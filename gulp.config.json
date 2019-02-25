@@ -1,0 +1,5 @@
+{
+  "library": "Our.Umbraco.StyledEditors",
+  "site": "StyledEditors.Site",
+  "pluginFolder": "Our.Umbraco.StyledEditors"
+}

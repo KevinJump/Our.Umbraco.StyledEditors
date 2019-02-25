@@ -1,0 +1,14 @@
+.styled-editor .styled-editor-textbox {
+    height: auto;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.styled-editors-wide {
+    width: 100%;
+}
+
+.styled-editors-wide .umb-property-editor {
+    min-width: 100%;
+}

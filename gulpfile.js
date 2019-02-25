@@ -1,22 +1,55 @@
 /// <binding ProjectOpened='default' />
+const { watch, src, dest } = require('gulp');
+var config = require('./gulp.config.json');
+
 /*
-    copy the app_plugins folder when it changes
-    means we don't have to rebuild, and umbraco
-    loads the changes quicker.
-*/
-var gulp = require('gulp'),
-    watch = require('gulp-watch');
+ * umbraco app_plugin folder script 
+ * 
+ * copies files from a app_plugin folder in a library to your
+ * umbraco site.
+ * 
+ * config.json should look like : 
+ * 
+ * {
+ *   "library": "folder-library-lives-in",
+ *   "site": "YourProject.Site",
+ *   "pluginFolder": "folder-in-app-plugins"
+ * }
+ */
 
-var sources = [
-    './Our.Umbraco.StyledEditors/App_Plugins'],
-    dest = './StyledEditors.Site/App_Plugins';
+const appPluginPath = '/App_Plugins/' + config.pluginFolder;
+const sourceFolder = config.library + appPluginPath + '/';
+const destination = config.site + appPluginPath;
+const source = sourceFolder + '**/*';
 
-gulp.task('monitor', function () {
 
-    sources.forEach(function (source) {
-        watch(source + '/**/*', { ignoreInitial: false, verbose: true })
-            .pipe(gulp.dest(dest));
-    });
-});
+console.log('umbraco app_plugin sync script running');
+console.log('--------------------------------------');
+console.log('from : ', source);
+console.log('to   : ', destination);
+console.log('--------------------------------------');
 
-gulp.task('default', ['monitor'])
+
+function copy(path) {
+
+    return src(path, { base: sourceFolder })
+        .pipe(dest(destination));
+}
+
+function time() {
+    return '[' + new Date().toISOString().slice(11, -5) + ']';
+}
+
+exports.default = function () {
+    watch(source, { ignoreInitial: false })
+        .on('change', function (path, stats) {
+            console.log(time(), path, 'changed');
+            copy(path);
+        })
+        .on('add', function (path, stats) {
+            console.log(time(), path, 'added');
+            copy(path);
+        });
+};
+    
+
